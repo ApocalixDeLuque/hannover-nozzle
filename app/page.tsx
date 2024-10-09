@@ -22,6 +22,7 @@ import Link from 'next/link';
 import LogoIcon from './_ui/global/components/LogoIcon';
 import { useToast } from './_ui/global/components/hooks/use-toast';
 import { ToastProvider } from './_ui/global/components/Toast';
+import Autoplay from 'embla-carousel-autoplay';
 
 export default function LandingPage() {
   const lenis = useLenis();
@@ -322,14 +323,39 @@ export default function LandingPage() {
                   <TabsContent value="robotics">
                     <Card>
                       <CardHeader>
+                        <div className="relative w-full h-80 overflow-hidden">
+                          <Carousel plugins={[Autoplay({ delay: 3000 })]} opts={{ align: 'start', loop: true }}>
+                            <CarouselContent>
+                              {Array.from({ length: 9 }).map((_, index) => (
+                                <CarouselItem key={index} className="w-full h-64">
+                                  <div className="aspect-square relative rounded border border-dark overflow-hidden w-full h-full">
+                                    <Image
+                                      src={`/kit_${index + 1}.jpeg`}
+                                      alt={`Kit de Robótica ${index + 1}`}
+                                      layout="fill"
+                                      objectFit="cover"
+                                      className="transition-transform hover:scale-105 duration-300"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <div className="flex justify-end gap-2 mt-4">
+                              <CarouselPrevious />
+                              <CarouselNext />
+                            </div>
+                          </Carousel>
+                        </div>
                         <CardTitle>Kits de Robótica</CardTitle>
-                        <CardDescription>Explora el mundo de la robótica con nuestros kits educativos</CardDescription>
+                        <CardDescription>
+                          Kits multifuncionales perfectos para adentrarse y experimentar en la robótica.
+                        </CardDescription>
                       </CardHeader>
                       <CardContent>
                         <ul className="list-disc list-inside space-y-2">
-                          <li>Carrito Arduino con piezas impresas en 3D</li>
-                          <li>Garra Suave (Soft Robot) para manipulación delicada</li>
-                          <li>Kit de Brazo Robótico programable</li>
+                          <li>Experiencia práctica e innovadora</li>
+                          <li>Diseño multifuncional para diversos proyectos</li>
+                          <li>Ideal para principiantes y entusiastas</li>
                         </ul>
                       </CardContent>
                       <CardFooter>
@@ -342,6 +368,29 @@ export default function LandingPage() {
                   <TabsContent value="supplies">
                     <Card>
                       <CardHeader>
+                        <div className="relative w-full h-80 overflow-hidden">
+                          <Carousel plugins={[Autoplay({ delay: 3000 })]} opts={{ align: 'start', loop: true }}>
+                            <CarouselContent>
+                              {Array.from({ length: 7 }).map((_, index) => (
+                                <CarouselItem key={index} className="w-full h-64">
+                                  <div className="aspect-square relative rounded border border-dark overflow-hidden w-full h-full">
+                                    <Image
+                                      src={index < 6 ? `/insumo_${index + 1}.webp` : '/insumo_7.jpg'}
+                                      alt={`Insumo ${index + 1}`}
+                                      layout="fill"
+                                      objectFit="cover"
+                                      className="transition-transform hover:scale-105 duration-300"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <div className="flex justify-end gap-2 mt-4">
+                              <CarouselPrevious />
+                              <CarouselNext />
+                            </div>
+                          </Carousel>
+                        </div>
                         <CardTitle>Insumos</CardTitle>
                         <CardDescription>Materiales de alta calidad para tus proyectos de impresión 3D</CardDescription>
                       </CardHeader>
@@ -362,6 +411,29 @@ export default function LandingPage() {
                   <TabsContent value="parts">
                     <Card>
                       <CardHeader>
+                        <div className="relative w-full h-80 overflow-hidden">
+                          <Carousel plugins={[Autoplay({ delay: 3000 })]} opts={{ align: 'start', loop: true }}>
+                            <CarouselContent>
+                              {Array.from({ length: 7 }).map((_, index) => (
+                                <CarouselItem key={index} className="w-full h-64">
+                                  <div className="aspect-square relative rounded border border-dark overflow-hidden w-full h-full">
+                                    <Image
+                                      src={index < 5 ? `/ref_${index + 1}.webp` : `/ref_${index + 1}.jpg`}
+                                      alt={`Refacción ${index + 1}`}
+                                      layout="fill"
+                                      objectFit="cover"
+                                      className="transition-transform hover:scale-105 duration-300"
+                                    />
+                                  </div>
+                                </CarouselItem>
+                              ))}
+                            </CarouselContent>
+                            <div className="flex justify-end gap-2 mt-4">
+                              <CarouselPrevious />
+                              <CarouselNext />
+                            </div>
+                          </Carousel>
+                        </div>
                         <CardTitle>Refacciones</CardTitle>
                         <CardDescription>
                           Piezas y componentes para mantener tu impresora en óptimas condiciones
@@ -389,7 +461,14 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">
                 Creado por nosotros
               </h2>
-              <Carousel opts={{ align: 'start', loop: true }}>
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                  }),
+                ]}
+                opts={{ align: 'start', loop: true }}
+              >
                 <CarouselContent>
                   {[
                     { title: ['Stand para Audífonos'], image: '/pitch/product_1.jpg' },
@@ -397,7 +476,7 @@ export default function LandingPage() {
                     { title: ['Llavero QR'], image: '/pitch/product_4.jpg' },
                     { title: ['Garra suave (Soft robot)'], image: '/pitch/product_5.jpg' },
                     { title: ['Llavero con Código QR'], image: '/pitch/product_6.jpg' },
-                    { title: ['Kit de Robótica'], image: '/pitch/product_7.jpg' },
+                    { title: ['Llavero personalizado'], image: '/pitch/product_7.jpg' },
                     { title: ['LLavero personzalizado'], image: '/pitch/product_8.jpg' },
                     { title: ['Artículos personalizados'], image: '/pitch/product_9.jpg' },
                     { title: ['Fidget toy'], image: '/pitch/product_10.jpg' },
