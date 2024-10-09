@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../../global/components/DropdownMenu';
-import { Button, buttonVariants, focusStyle } from '../../global/components/Button';
+import { Button, buttonVariants } from '../../global/components/Button';
 import cn from 'classnames';
 import { Input } from '../../global/components/Input';
 
@@ -42,7 +42,6 @@ export const FilterSection: React.FC<FilterSectionProps> = ({
   priceRange,
   onSortChange,
   onCategoryChange,
-  onPriceChange,
 }) => {
   const [sortLabel, setSortLabel] = useState(sortOptions[0]?.label ?? 'Sort');
   const [categoryLabel, setCategoryLabel] = useState(categoryOptions[0]?.label ?? 'Category');

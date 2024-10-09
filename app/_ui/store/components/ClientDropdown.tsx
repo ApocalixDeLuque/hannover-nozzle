@@ -7,8 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../../global/components/DropdownMenu';
-import { Button, buttonVariants } from '../../global/components/Button';
-import cn from 'classnames';
+import { Button } from '../../global/components/Button';
 
 interface DropdownOption {
   label: string;
@@ -21,6 +20,7 @@ interface ClientDropdownProps {
   onChange?: (value: string) => void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ClientDropdown: React.FC<ClientDropdownProps> = ({ options, defaultLabel, onChange }) => {
   return (
     <DropdownMenu>

@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink } from '../../global/components/Breadcrumbs';

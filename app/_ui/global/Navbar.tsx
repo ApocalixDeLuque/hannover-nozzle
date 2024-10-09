@@ -161,6 +161,7 @@ const SearchBar = ({
   </div>
 );
 
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
 const LoginForm = ({ onSubmit, isLoading }: { onSubmit: (data: any) => void; isLoading: boolean }) => {
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -231,6 +232,7 @@ const LoginForm = ({ onSubmit, isLoading }: { onSubmit: (data: any) => void; isL
   );
 };
 
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SignupForm = ({ onSubmit, isLoading }: { onSubmit: (data: any) => void; isLoading: boolean }) => {
   const form = useForm<z.infer<typeof signupSchema>>({
     resolver: zodResolver(signupSchema),
@@ -332,6 +334,7 @@ const OTPForm = ({
   isLoading,
   email,
 }: {
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (data: any) => void;
   isLoading: boolean;
   email: string;

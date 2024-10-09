@@ -1,11 +1,6 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '../global/components/Carousel';
 import InfiniteText from './components/InfiniteText';
-import { TagType, Tag } from '../global/Tag';
-
 interface FeaturedCardProps {
   title: string[];
   image: string;

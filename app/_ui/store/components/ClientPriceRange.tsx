@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import React from 'react';
 import { Input } from '../../global/components/Input';
 
