@@ -28,7 +28,7 @@ export async function POST(solicitud: Request) {
           <table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
             <tr>
               <td style="padding: 40px 20px; text-align: center; background-color: #000000;">
-                <img src="https://translate3d.tech/logo.png" alt="Translate3D Logo" style="max-width: 200px;">
+                <img src="https://scontent.fbjx1-3.fna.fbcdn.net/v/t39.30808-6/462553253_122095303724571263_199796978902994249_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AQmpDcMSANAQ7kNvgHCMQi_&_nc_ht=scontent.fbjx1-3.fna&_nc_gid=Aqij9-A-u889teXP6k7AChB&oh=00_AYD2CZ5KNfoH7lbSZQeWku2aznqwfLBemRPb0rHpbQ0xdQ&oe=670C85C6" alt="Translate3D Logo" style="max-width: 200px;">
               </td>
             </tr>
             <tr>
