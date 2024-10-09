@@ -25,3 +25,195 @@ body {
     text-wrap: balance;
   }
 }
+
+.cross-dot-pattern {
+  background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}
+
+.cross-dot-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(circle, #e5e5e5 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 20px 20px;
+}
+
+.link-light,
+.link-dark,
+.link-action {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.link-light::after,
+.link-dark::after,
+.link-action::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-light:hover::after,
+.link-dark:hover::after,
+.link-action:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Specific color variants */
+.link-light::after {
+  background-color: #e5e5e5;
+}
+
+.link-dark::after {
+  background-color: #0b0604;
+}
+
+.link-action::after {
+  background-color: #db3300;
+}
+
+/* Remove opacity changes in the keyframes */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.3s forwards;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.3s forwards;
+}
+
+.slide-out-left {
+  animation: slide-out-left 0.3s forwards;
+}
+
+.slide-out-right {
+  animation: slide-out-right 0.3s forwards;
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #dddddd;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #0b0604;
+    border-radius: 100vh;
+  }
+}
+
+html {
+  background-color: white;
+  color: black;
+}
+
+::selection {
+  background: #db3300;
+  color: white;
+}
+
+::-moz-selection {
+  background: #db3300;
+  color: white;
+}
+
+::-webkit-selection {
+  background: #db3300;
+  color: white;
+}
+
+/* remove the user selection on all a, input, textarea, button, select */
+a,
+input,
+textarea,
+button,
+select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:focus-visible:not(input):not(textarea):not(button) {
+  outline: none !important;
+}
+
+:focus-visible:not(input):not(textarea):not(button)::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px dashed currentColor;
+  border-radius: inherit;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+/* Ensure the pseudo-element is positioned correctly */
+*:not(body):not(input):not(textarea):not(button):focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+/* For elements that can't be relatively positioned */
+input:focus-visible::before,
+textarea:focus-visible::before,
+select:focus-visible::before,
+button:focus-visible::before {
+  inset: -6px;
+}
