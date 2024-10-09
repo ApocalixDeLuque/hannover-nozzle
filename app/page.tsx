@@ -501,11 +501,20 @@ export default function LandingPage() {
                   ¿Por qué elegirnos?
                 </h2>
                 <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
-                  <FeatureCard title="Experiencia" description="Más de 10 años en la industria de impresión 3D" />
-                  <FeatureCard title="Tecnología de punta" description="Utilizamos las últimas tecnologías SLA y FDM" />
                   <FeatureCard
+                    imageUrl="https://images.unsplash.com/photo-1563520240533-66480a3916fe?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    title="Personalización"
+                    description="Diseño hecho desde 0 para tus proyectos, tus clientes y tus ideas"
+                  />
+                  <FeatureCard
+                    imageUrl="https://images.unsplash.com/photo-1680539208269-e7c8898c0713?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    title="Tecnología de punta"
+                    description="Utilizamos las últimas tecnologías SLA y FDM"
+                  />
+                  <FeatureCard
+                    imageUrl="https://images.unsplash.com/photo-1696861273647-92dfe8bb697c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     title="Soporte personalizado"
-                    description="Asesoramiento experto en cada etapa de tu proyecto"
+                    description="Asesoramiento de nuestros expertos en cada etapa de tu proyecto"
                   />
                 </div>
               </div>
@@ -709,14 +718,22 @@ function ServiceCard({ icon, title, description, imageUrl }: ServiceCardProps) {
   );
 }
 
-function FeatureCard({ title, description }: { title: string; description: string }) {
+function FeatureCard({ title, description, imageUrl }: { title: string; description: string; imageUrl: string }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-light text-dark p-6 rounded-lg border border-dark text-center animate-on-scroll"
-    >
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p>{description}</p>
-    </motion.div>
+    <div className="bg-light text-dark p-6 rounded-lg border border-dark text-center animate-on-scroll group">
+      <div className="relative !aspect-video rounde border border-dark w-full min-h-40 overflow-hidden mb-4">
+        <div className="w-full h-full">
+          <Image
+            src={imageUrl}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform group-hover:scale-110 duration-300"
+          />
+        </div>
+      </div>
+      <h3 className="text-xl font-semibold mb-2 pt-5">{title}</h3>
+      <p className="pb-5">{description}</p>
+    </div>
   );
 }
