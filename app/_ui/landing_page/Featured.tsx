@@ -37,7 +37,7 @@ export function Featured(): JSX.Element {
 
 export default function FeaturedCard({ title, image }: FeaturedCardProps): JSX.Element {
   return (
-    <div className="w-[400px] h-[300px] rounded-lg overflow-hidden relative group border border-dark">
+    <div className="w-[300px] h-[300px] rounded-lg overflow-hidden relative group border border-dark">
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
         style={{ backgroundImage: `url(${image})` }}

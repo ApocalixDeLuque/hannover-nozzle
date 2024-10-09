@@ -265,7 +265,7 @@ export default function LandingPage() {
               <Tabs defaultValue="robotics" className="w-full max-w-4xl">
                 <TabsList className="grid w-full grid-cols-3 gap-2">
                   <TabsTrigger className="uppercase text-xs sm:text-sm" value="robotics">
-                    Kits de Robótica
+                    Kits Robótica
                   </TabsTrigger>
                   <TabsTrigger className="uppercase text-xs sm:text-sm" value="supplies">
                     Insumos
