@@ -166,7 +166,7 @@ export default function LandingPage() {
               </button>
             </div>
             {isMenuOpen && (
-              <nav className="md:hidden bg-light/90 backdrop-blur-md">
+              <nav className="md:hidden bg-light/80 backdrop-blur-md">
                 <ul className="flex flex-col items-center py-4">
                   <li className="py-2">
                     <a
@@ -262,7 +262,7 @@ export default function LandingPage() {
               <a
                 onClick={() => lenis?.scrollTo('#services')}
                 href="#services"
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce -ml-8"
                 tabIndex={-1}
               >
                 <ChevronDown className="h-8 w-8 text-primary" />
@@ -522,7 +522,7 @@ export default function LandingPage() {
 
             <section id="subscribe" className="py-20">
               <div className="flex flex-col items-center px-5 gap-2 lg:gap-4 lg:px-10">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 animate-on-scroll">
+                <h2 className="text-3xl md:text-4xl text-center font-bold mb-8 animate-on-scroll">
                   ¡Suscríbete y Obtén un 10% de Descuento!
                 </h2>
                 <p className="mb-8 text-lg md:text-xl max-w-2xl mx-auto text-center normal-case leading-tight">
@@ -636,11 +636,7 @@ export default function LandingPage() {
                 <div>
                   <h4 className="font-semibold mb-4">Síguenos</h4>
                   <div className="flex space-x-4">
-                    <a
-                      onClick={() => lenis?.scrollTo('#subscribe')}
-                      href="#subscribe"
-                      className="text-primary hover:text-primary/80"
-                    >
+                    <a href="https://www.facebook.com/translate3d.tech" className="text-primary hover:text-primary/80">
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                           fillRule="evenodd"
@@ -649,11 +645,7 @@ export default function LandingPage() {
                         />
                       </svg>
                     </a>
-                    <a
-                      onClick={() => lenis?.scrollTo('#subscribe')}
-                      href="#subscribe"
-                      className="text-primary hover:text-primary/80"
-                    >
+                    <a href="https://www.instagram.com/translate3d.tech" className="text-primary hover:text-primary/80">
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                           fillRule="evenodd"
@@ -662,11 +654,7 @@ export default function LandingPage() {
                         />
                       </svg>
                     </a>
-                    <a
-                      onClick={() => lenis?.scrollTo('#subscribe')}
-                      href="#subscribe"
-                      className="text-primary hover:text-primary/80"
-                    >
+                    <a href="https://www.x.com/translate3d" className="text-primary hover:text-primary/80">
                       <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                       </svg>
@@ -721,7 +709,7 @@ function ServiceCard({ icon, title, description, imageUrl }: ServiceCardProps) {
 function FeatureCard({ title, description, imageUrl }: { title: string; description: string; imageUrl: string }) {
   return (
     <div className="bg-light text-dark p-6 rounded-lg border border-dark text-center animate-on-scroll group">
-      <div className="relative !aspect-video rounde border border-dark w-full min-h-40 overflow-hidden mb-4">
+      <div className="relative !aspect-video rounded border border-dark w-full min-h-40 overflow-hidden mb-4">
         <div className="w-full h-full">
           <Image
             src={imageUrl}
