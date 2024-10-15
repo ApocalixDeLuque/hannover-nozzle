@@ -359,8 +359,8 @@ export default function LandingPage() {
                         </ul>
                       </CardContent>
                       <CardFooter>
-                        <Button variant="action" className="w-full">
-                          Ver todos los kits
+                        <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
+                          Suscríbete para recibir más información
                         </Button>
                       </CardFooter>
                     </Card>
@@ -402,8 +402,8 @@ export default function LandingPage() {
                         </ul>
                       </CardContent>
                       <CardFooter>
-                        <Button variant="action" className="w-full">
-                          Explorar insumos
+                        <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
+                          Suscríbete para recibir más información
                         </Button>
                       </CardFooter>
                     </Card>
@@ -447,8 +447,8 @@ export default function LandingPage() {
                         </ul>
                       </CardContent>
                       <CardFooter>
-                        <Button variant="action" className="w-full">
-                          Buscar refacciones
+                        <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
+                          Suscríbete para recibir más información
                         </Button>
                       </CardFooter>
                     </Card>
