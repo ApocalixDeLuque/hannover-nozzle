@@ -262,7 +262,7 @@ export default function LandingPage() {
               <a
                 onClick={() => lenis?.scrollTo('#services')}
                 href="#services"
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce -ml-8"
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce -ml-4"
                 tabIndex={-1}
               >
                 <ChevronDown className="h-8 w-8 text-primary" />
@@ -360,7 +360,7 @@ export default function LandingPage() {
                       </CardContent>
                       <CardFooter>
                         <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
-                          Suscríbete para recibir más información
+                          Suscríbete para más
                         </Button>
                       </CardFooter>
                     </Card>
@@ -403,7 +403,7 @@ export default function LandingPage() {
                       </CardContent>
                       <CardFooter>
                         <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
-                          Suscríbete para recibir más información
+                          Suscríbete para más
                         </Button>
                       </CardFooter>
                     </Card>
@@ -448,7 +448,7 @@ export default function LandingPage() {
                       </CardContent>
                       <CardFooter>
                         <Button onClick={() => lenis?.scrollTo('#subscribe')} variant="action" className="w-full">
-                          Suscríbete para recibir más información
+                          Suscríbete para más
                         </Button>
                       </CardFooter>
                     </Card>

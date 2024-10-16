@@ -7,7 +7,7 @@ import cn from 'classnames';
 
 // Define the button variants using cva (class-variance-authority)
 const buttonVariants = cva(
-  'relative flex h-fit justify-center items-center font-semibold text-nowrap min-w-fit uppercase transition-all rounded overflow-hidden group/btn reflect-none',
+  'relative flex h-fit justify-center items-center font-semibold text-nowrap uppercase transition-all rounded overflow-hidden group/btn reflect-none',
   {
     variants: {
       variant: {
